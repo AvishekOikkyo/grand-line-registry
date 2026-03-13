@@ -120,7 +120,9 @@ app.use((req, res, next) => {
 // routes
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {
+    crew: crewMembers
+  });
 });
 
 app.get("/", (req, res) => {
