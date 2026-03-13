@@ -5,39 +5,51 @@
     <title>Grand Line Registry</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
-  
+
 <div class="navbar bg-base-300 shadow-lg">
-  
-  <div class="flex-1">
-    <a href="/" class="btn btn-ghost normal-case text-xl">⚓ Grand Line Registry</a>
+
+  <!-- LEFT -->
+  <div class="navbar-start">
+
+    <!-- Mobile dropdown -->
+    <div class="dropdown">
+      <label tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        ☰
+      </label>
+
+      <ul tabindex="0"
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/crew">Crew</a></li>
+        <li><a href="/recruit">Recruit</a></li>
+        <li><a href="/log-pose">Log Pose</a></li>
+
+      </ul>
+    </div>
+
+    <!-- Brand -->
+    <a href="/" class="btn btn-ghost text-xl">
+      ⚓ Grand Line Registry
+    </a>
+
   </div>
 
-  
-  <div class="dropdown">
-    <label tabindex="0" class="btn btn-ghost sm:hidden">
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-      </svg>
-    </label>
-    <ul tabindex="0" class="menu menu-sm dropdown-content right-0 mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-      <li><a href="/">Home</a></li>
-      <li><a href="/crew">Crew</a></li>
-      <li><a href="/recruit">Recruit</a></li>
-      <li><a href="/log-pose">Log Pose</a></li>
-    </ul>
-  </div>
 
-  
-  <div class="navbar-center hidden sm:flex">
+  <!-- DESKTOP MENU -->
+  <div class="navbar-center hidden lg:flex">
+
     <ul class="menu menu-horizontal px-1">
       <li><a href="/">Home</a></li>
       <li><a href="/crew">Crew</a></li>
       <li><a href="/recruit">Recruit</a></li>
       <li><a href="/log-pose">Log Pose</a></li>
     </ul>
+
   </div>
 
-  
+
+  <!-- RIGHT SIDE TITLE -->
   <div class="navbar-end">
 
     <span class="badge badge-outline">
@@ -45,6 +57,5 @@
     </span>
 
   </div>
-</div>
 
-  
+</div>
