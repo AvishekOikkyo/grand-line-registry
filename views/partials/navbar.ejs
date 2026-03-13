@@ -1,14 +1,16 @@
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-100 shadow">
 
   <div class="navbar-start">
 
+    <!-- Mobile dropdown -->
     <div class="dropdown">
 
-      <label tabindex="0" class="btn btn-ghost lg:hidden">
-      </label>
+      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+        ☰
+      </div>
 
       <ul tabindex="0"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
 
         <li><a href="/">Home</a></li>
         <li><a href="/crew">Crew</a></li>
@@ -19,10 +21,13 @@
 
     </div>
 
-    <a href="/" class="btn btn-ghost text-xl">Grand Line Registry</a>
+    <a href="/" class="btn btn-ghost text-xl">
+      ⚓ Grand Line Registry
+    </a>
 
   </div>
 
+  <!-- Desktop Menu -->
   <div class="navbar-center hidden lg:flex">
 
     <ul class="menu menu-horizontal px-1">
