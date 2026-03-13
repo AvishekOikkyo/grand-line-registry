@@ -1,45 +1,42 @@
-<div class="navbar bg-base-100 shadow-md">
+<div class="navbar bg-base-100 shadow-sm">
 
-  <!-- Navbar Start (Brand + Mobile Menu) -->
   <div class="navbar-start">
 
-    <!-- Mobile Hamburger -->
     <div class="dropdown">
+
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         ☰
       </label>
 
       <ul tabindex="0"
-          class="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+
         <li><a href="/">Home</a></li>
         <li><a href="/crew">Crew</a></li>
         <li><a href="/recruit">Recruit</a></li>
         <li><a href="/log-pose">Log Pose</a></li>
+
       </ul>
+
     </div>
 
-    <!-- Brand -->
-    <a href="/" class="btn btn-ghost text-xl font-bold">
-      Grand Line Registry
-    </a>
+    <a href="/" class="btn btn-ghost text-xl">Grand Line Registry</a>
 
   </div>
 
-
-  <!-- Navbar Center (Desktop Menu) -->
   <div class="navbar-center hidden lg:flex">
+
     <ul class="menu menu-horizontal px-1">
       <li><a href="/">Home</a></li>
       <li><a href="/crew">Crew</a></li>
       <li><a href="/recruit">Recruit</a></li>
       <li><a href="/log-pose">Log Pose</a></li>
     </ul>
+
   </div>
 
-
-  <!-- Navbar End (Page Title Badge) -->
   <div class="navbar-end">
-    <span class="badge badge-primary"><%= title %></span>
+    <span class="badge badge-outline"><%= title %></span>
   </div>
 
 </div>
