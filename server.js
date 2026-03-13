@@ -181,9 +181,9 @@ app.post("/recruit", (req, res) => {
     status: "pending"
   };
 
-  crewMembers.push(newRecruit);
+ crewMembers.push(newRecruit);
 
-  res.render("recruit");
+res.render("recruit", { errors: [] });
 
 });
 
