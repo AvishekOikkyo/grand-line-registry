@@ -125,11 +125,6 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/", (req, res) => {
-  res.render("index", {
-    crew: crewMembers
-  });
-});
 
 app.get("/crew", (req, res) => {
   res.render("crew", {
