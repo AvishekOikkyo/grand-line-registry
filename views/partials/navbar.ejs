@@ -6,27 +6,15 @@
     <link rel="stylesheet" href="/css/main.css" />
   </head>
 
-<div class="navbar bg-base-100 shadow-sm">
+<div class="navbar bg-base-300 shadow-lg">
 
+  <!-- Left Section -->
   <div class="navbar-start">
 
+    <!-- Mobile Dropdown -->
     <div class="dropdown">
-
       <label tabindex="0" class="btn btn-ghost lg:hidden">
         ☰
-      </label>
-
-  <!-- Mobile Dropdown -->
-  <div class="navbar-end">
-    <div class="dropdown dropdown-end">
-
-      <label tabindex="0" class="btn btn-ghost lg:hidden">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
-             viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16m-7 6h7"/>
-        </svg>
       </label>
 
       <ul tabindex="0"
@@ -38,8 +26,28 @@
         <li><a href="/log-pose">Log Pose</a></li>
 
       </ul>
-
     </div>
+
+    <!-- Brand -->
+    <a href="/" class="btn btn-ghost text-xl">
+      ⚓ Grand Line Registry
+    </a>
+
+  </div>
+
+  <!-- Desktop Menu -->
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Home</a></li>
+      <li><a href="/crew">Crew</a></li>
+      <li><a href="/recruit">Recruit</a></li>
+      <li><a href="/log-pose">Log Pose</a></li>
+    </ul>
+  </div>
+
+  <!-- Right side title -->
+  <div class="navbar-end">
+    <span class="badge badge-outline"><%= title %></span>
   </div>
 
 </div>
