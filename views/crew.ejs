@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Crew Roster</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="p-6">
+
+<!-- Navbar -->
+<%- include("partials/navbar", { title: "Crew Roster" }) %>
+
+<div class="text-center mb-10">
+  <h1 class="text-4xl font-bold">Straw Hat Crew Roster</h1>
+  <p class="text-lg mt-2">
+    Full list of the Straw Hat Pirates sailing the Grand Line.
+  </p>
+</div>
+
+<div class="overflow-x-auto">
+
+<table class="table table-zebra w-full">
+
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Role</th>
+<th>Devil Fruit</th>
+<th>Bounty</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody>
+
+<% for (const member of crew) { %>
+
+<tr>
+
+<td><%= member.id %></td>
+
+<td><%= member.name %></td>
+
+<td><%= member.role %></td>
+
+<td><%= member.devilFruit %></td>
+
+<td><%= member.bounty.toLocaleString() %> Berries</td>
+
+<td>
+
+<% if (member.status === "active") { %>
+
+<span class="badge badge-success">Active</span>
+
+<% } else if (member.status === "pending") { %>
+
+<span class="badge badge-warning">Pending Approval</span>
+
+<% } else { %>
+
+<span class="badge badge-error">Bounty Frozen</span>
+
+<% } %>
+
+</td>
+
+</tr>
+
+<% } %>
+
+</tbody>
+
+</table>
+
+</div>
+
+</body>
+
+</html>
