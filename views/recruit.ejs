@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Join the Crew</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="p-6">
+
+<!-- Navbar -->
+<%- include("partials/navbar", { title: "Join the Crew" }) %>
+
+<div class="max-w-2xl mx-auto mt-10">
+
+<h1 class="text-3xl font-bold mb-6 text-center">
+Join the Straw Hat Pirates
+</h1>
+
+<form action="/recruit" method="POST" class="space-y-6">
+
+<!-- Name -->
+<div class="form-control">
+<label class="label">
+<span class="label-text">Your Name</span>
+</label>
+<input type="text" name="applicantName" class="input input-bordered w-full">
+</div>
+
+<!-- Skill -->
+<div class="form-control">
+<label class="label">
+<span class="label-text">Special Skill</span>
+</label>
+<input type="text" name="skill" class="input input-bordered w-full">
+</div>
+
+<!-- Role -->
+<div class="form-control">
+<label class="label">
+<span class="label-text">Desired Role</span>
+</label>
+
+<select name="role" class="select select-bordered w-full">
+<option>Select a role</option>
+<option>Navigator</option>
+<option>Cook</option>
+<option>Sniper</option>
+<option>Doctor</option>
+<option>Musician</option>
+<option>Other</option>
+</select>
+</div>
+
+<!-- Message -->
+<div class="form-control">
+<label class="label">
+<span class="label-text">Why should Luffy let you join?</span>
+</label>
+
+<textarea
+name="message"
+class="textarea textarea-bordered"
+rows="4"></textarea>
+</div>
+
+<!-- Preferred Sea -->
+<div class="form-control">
+
+<label class="label">
+<span class="label-text">Preferred Sea</span>
+</label>
+
+<label class="cursor-pointer label">
+<span class="label-text">East Blue</span>
+<input type="radio" name="sea" value="East Blue" class="radio">
+</label>
+
+<label class="cursor-pointer label">
+<span class="label-text">West Blue</span>
+<input type="radio" name="sea" value="West Blue" class="radio">
+</label>
+
+<label class="cursor-pointer label">
+<span class="label-text">North Blue</span>
+<input type="radio" name="sea" value="North Blue" class="radio">
+</label>
+
+<label class="cursor-pointer label">
+<span class="label-text">South Blue</span>
+<input type="radio" name="sea" value="South Blue" class="radio">
+</label>
+
+</div>
+
+<!-- Agreement -->
+<div class="form-control">
+
+<label class="cursor-pointer label">
+<span class="label-text">
+I understand the risks of the Grand Line
+</span>
+
+<input type="checkbox" name="agreeTerms" class="checkbox">
+</label>
+
+</div>
+
+<!-- Submit -->
+<div class="form-control">
+
+<button type="submit" class="btn btn-primary w-full">
+Submit Application
+</button>
+
+</div>
+
+</form>
+
+</div>
+
+</body>
+</html>

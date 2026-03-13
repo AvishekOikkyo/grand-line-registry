@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Secret Log Pose</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body class="p-6">
+
+<%- include("partials/navbar", { title: "Secret Log Pose" }) %>
+
+<div class="max-w-4xl mx-auto mt-8">
+
+<!-- Request Log -->
+<div class="alert alert-info mb-6">
+  <span><%= log %></span>
+</div>
+
+<!-- Destination Section -->
+<div class="text-center mb-8">
+  <h1 class="text-4xl font-bold">Destination Reached</h1>
+  <p class="text-lg mt-2">
+    The crew has arrived at the legendary island of Wano!
+  </p>
+</div>
+
+<!-- Active Crew -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<% for (const member of crew) { %>
+
+  <% if (member.status === "active") { %>
+
+  <div class="card bg-base-100 shadow-lg">
+
+    <div class="card-body">
+
+      <h2 class="card-title"><%= member.name %></h2>
+
+      <p><strong>Role:</strong> <%= member.role %></p>
+
+      <p><strong>Bounty:</strong>
+        <%= member.bounty.toLocaleString() %> Berries
+      </p>
+
+    </div>
+
+  </div>
+
+  <% } %>
+
+<% } %>
+
+</div>
+
+</div>
+
+</body>
+</html>
