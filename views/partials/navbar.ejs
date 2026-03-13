@@ -1,13 +1,44 @@
-<div class="navbar bg-base-100 shadow">
+<html lang="en" data-theme="night">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grand Line Registry</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
 
+<body tabindex="-1">
+
+<div class="navbar bg-base-300 shadow-lg">
+
+  <!-- Brand -->
   <div class="navbar-start">
+    <a href="/" class="btn btn-ghost text-xl">
+      ⚓ Grand Line Registry
+    </a>
+  </div>
 
-    <!-- Mobile dropdown -->
-    <div class="dropdown">
+  <!-- Desktop Menu -->
+  <div class="navbar-center hidden lg:flex">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/">Home</a></li>
+      <li><a href="/crew">Crew</a></li>
+      <li><a href="/recruit">Recruit</a></li>
+      <li><a href="/log-pose">Log Pose</a></li>
+    </ul>
+  </div>
 
-      <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-        ☰
-      </div>
+  <!-- Mobile Dropdown -->
+  <div class="navbar-end">
+    <div class="dropdown dropdown-end">
+
+      <label tabindex="0" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16m-7 6h7"/>
+        </svg>
+      </label>
 
       <ul tabindex="0"
           class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
@@ -20,27 +51,6 @@
       </ul>
 
     </div>
-
-    <a href="/" class="btn btn-ghost text-xl">
-      ⚓ Grand Line Registry
-    </a>
-
-  </div>
-
-  <!-- Desktop Menu -->
-  <div class="navbar-center hidden lg:flex">
-
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/">Home</a></li>
-      <li><a href="/crew">Crew</a></li>
-      <li><a href="/recruit">Recruit</a></li>
-      <li><a href="/log-pose">Log Pose</a></li>
-    </ul>
-
-  </div>
-
-  <div class="navbar-end">
-    <span class="badge badge-outline"><%= title %></span>
   </div>
 
 </div>
